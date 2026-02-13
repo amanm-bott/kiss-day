@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kiss Day – My Sweet Mahek</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at center,#3b0a2a 0%,#0b0210 70%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+/* floating kiss background */
+.kiss-bg span{
+    position:absolute;
+    font-size:26px;
+    opacity:.25;
+    animation:kissFloat 14s linear infinite;
+}
+
+@keyframes kissFloat{
+    from{transform:translateY(110vh) rotate(0deg);}
+    to{transform:translateY(-15vh) rotate(360deg);}
+}
+
+/* stage */
+.stage{
+    width:860px;
+    max-width:94%;
+    height:520px;
+    position:relative;
+    border-radius:40px;
+    overflow:hidden;
+    background:
+        linear-gradient(180deg,#5c123b,#240414);
+    box-shadow:0 40px 80px rgba(255,0,120,.35);
+}
+
+/* curtains */
+.curtain{
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:80px;
+    background:linear-gradient(180deg,#a10f4a,#5c0626);
+    z-index:2;
+}
+.curtain.left{left:0;border-radius:40px 0 0 40px;}
+.curtain.right{right:0;border-radius:0 40px 40px 0;}
+
+/* spotlight */
+.spotlight{
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at center,
+            rgba(255,190,220,.35),
+            transparent 45%);
+    pointer-events:none;
+}
+
+/* slide area */
+.scene{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 90px;
+}
+
+.slide{
+    display:none;
+}
+
+h1{
+    font-size:46px;
+    color:#ffd1ea;
+}
+
+p{
+    font-size:20px;
+    line-height:1.8;
+    margin-top:18px;
+    color:#ffe6f2;
+}
+
+.big{
+    font-size:95px;
+    margin:18px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:32px;
+    padding:12px 36px;
+    border-radius:40px;
+    background:linear-gradient(135deg,#ff4fa3,#ff8fcf);
+    color:#3b0020;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* slide control */
+input{display:none;}
+
+#k1:checked ~ .stage .s1{display:block;}
+#k2:checked ~ .stage .s2{display:block;}
+#k3:checked ~ .stage .s3{display:block;}
+#k4:checked ~ .stage .s4{display:block;}
+</style>
+</head>
+
+<body>
+
+<!-- background kisses -->
+<div class="kiss-bg">
+<span style="left:5%">💋</span>
+<span style="left:15%;animation-delay:3s">💖</span>
+<span style="left:28%;animation-delay:6s">💋</span>
+<span style="left:40%;animation-delay:2s">💞</span>
+<span style="left:55%;animation-delay:4s">💋</span>
+<span style="left:70%;animation-delay:1s">💘</span>
+<span style="left:85%;animation-delay:5s">💋</span>
+</div>
+
+<input type="radio" name="kiss" id="k1" checked>
+<input type="radio" name="kiss" id="k2">
+<input type="radio" name="kiss" id="k3">
+<input type="radio" name="kiss" id="k4">
+
+<div class="stage">
+
+<div class="curtain left"></div>
+<div class="curtain right"></div>
+<div class="spotlight"></div>
+
+<div class="scene">
+
+<!-- Slide 1 -->
+<div class="slide s1">
+<h1>Happy Kiss Day 💋<br>My Sweety..💗</h1>
+<div class="big">💋✨</div>
+<p>
+Tonight, under this soft spotlight,  
+my heart only looks for you.
+</p>
+<label for="k2" class="btn">Come closer 💞</label>
+</div>
+
+<!-- Slide 2 -->
+<div class="slide s2">
+<h1>Just one gentle kiss 🌹</h1>
+<div class="big">💋🌙</div>
+<p>
+Not loud.  
+Not rushed.  
+Just a quiet kiss that says  
+“I choose you.”
+</p>
+<label for="k3" class="btn">A little more 💗</label>
+</div>
+
+<!-- Slide 3 -->
+<div class="slide s3">
+<h1>My favourite moment 💓</h1>
+<div class="big">💏💫</div>
+<p>
+Every kiss with you feels like  
+time slowing down…  
+just for us.
+</p>
+<label for="k4" class="btn">One last scene 🎬</label>
+</div>
+
+<!-- Slide 4 -->
+<div class="slide s4">
+<h1>Only you, Mahek 💖</h1>
+<div class="big">💋🌸</div>
+<p>
+No matter how big the world becomes,  
+my kisses will always find you first.
+</p>
+<p>
+Forever yours,  
+My Sweet Mahek.
+</p>
+<label for="k1" class="btn">Play again 🔁</label>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
